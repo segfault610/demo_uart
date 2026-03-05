@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 d/home/jonny/Desktop/CourseWork/Scripting/demo_uart
 vtb_uart
-Z1 !s110 1772717778
+Z1 !s110 1772718047
 !i10b 1
-!s100 cL`;dA4@PMZ1?9LCEef072
-IaK7zW@JIUJEzN2ICO`;>H3
+!s100 BHQbQJ2g0TK:Vf`F06mZZ3
+IeZW_6k^7?h4PWKff8G:F[0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1772717776
+w1772718041
 8./tb/tb_uart.v
 F./tb/tb_uart.v
 L0 3
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1772717778.000000
+Z4 !s108 1772718047.000000
 !s107 ./tb/tb_uart.v|
 !s90 ./tb/tb_uart.v|
 !i113 1
@@ -83,7 +83,7 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1772718046.000000
 !s107 ./rtl/uart_tx.v|
 !s90 ./rtl/uart_tx.v|
 !i113 1

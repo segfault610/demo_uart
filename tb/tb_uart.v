@@ -20,6 +20,10 @@ module tb_uart;
         .tx(tx)
     );
 
+    initial begin
+    	$dumpfile("uart_tb.vcd");   // VCD output file
+    	$dumpvars(0, tb_uart);      // dump all signals in tb_uart hierarchy
+    end
     // 100MHz clock
     initial clk = 0;
     always #5 clk = ~clk;
@@ -33,7 +37,7 @@ module tb_uart;
     integer pass = 0;
     integer fail = 0;
     integer i;
-
+    
     // Task to send a byte
     task send_byte;
         input [7:0] data;
