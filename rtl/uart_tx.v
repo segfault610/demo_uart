@@ -5,12 +5,12 @@ module uart_tx #
     parameter CLKS_PER_BIT = 8
 )
 (
-    input        clk,
-    input        rst,
-    input        start,
-    input  [7:0] data_in,
-    output reg   tx,
-    output reg   busy
+    input clk,
+    input rst,
+    input start,
+    input [7:0] data_in,
+    output reg tx,
+    output reg busy
 );
 
     localparam IDLE      = 3'd0;
@@ -25,9 +25,9 @@ module uart_tx #
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            state     <= IDLE;
-            tx        <= 1'b1;
-            busy      <= 1'b0;
+            state <= IDLE;
+            tx <= 1'b1;
+            busy <= 1'b0;
             clk_count <= 0;
             bit_index <= 0;
         end
@@ -35,15 +35,15 @@ module uart_tx #
             case (state)
 
             IDLE: begin
-                tx   <= 1'b1;
+                tx <= 1'b1;
                 busy <= 1'b0;
                 clk_count <= 0;
                 bit_index <= 0;
 
                 if (start) begin
-                    busy     <= 1'b1;
+                    busy <= 1'b1;
                     data_reg <= data_in;
-                    state    <= START_BIT;
+                    state <= START_BIT;
                 end
             end
 

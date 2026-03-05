@@ -19,16 +19,16 @@ module tb_uart;
         .rx_valid(rx_valid),
         .tx(tx)
     );
-
+    // only for me, you needn't worry about this
     initial begin
-    	$dumpfile("uart_tb.vcd");   // VCD output file
-    	$dumpvars(0, tb_uart);      // dump all signals in tb_uart hierarchy
+    	$dumpfile("uart_tb.vcd");       // VCD output file
+    	$dumpvars(0, tb_uart.dut);      // dump all signals in tb_uart hierarchy
     end
+
     // 100MHz clock
     initial clk = 0;
     always #5 clk = ~clk;
 
-    // expected signals
     reg [7:0] expected_tx [0:3];
     reg [7:0] expected_rx [0:3];
 
@@ -38,7 +38,6 @@ module tb_uart;
     integer fail = 0;
     integer i;
     
-    // Task to send a byte
     task send_byte;
         input [7:0] data;
         begin
@@ -72,7 +71,7 @@ module tb_uart;
 
         #20;
 
-        $display("\n==== SCOREBOARD ====");
+        $display("\n==== SCOREBOARD to check successful bytes====");
 
         for (i = 0; i < tx_count; i = i + 1) begin
             if (expected_tx[i] == expected_rx[i]) begin

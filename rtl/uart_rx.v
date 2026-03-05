@@ -5,17 +5,17 @@ module uart_rx #
     parameter CLKS_PER_BIT = 8
 )
 (
-    input        clk,
-    input        rst,
-    input        rx,
+    input clk,
+    input rst,
+    input rx,
     output reg [7:0] data_out,
-    output reg   rx_valid
+    output reg rx_valid
 );
 
-    localparam IDLE      = 3'd0;
+    localparam IDLE = 3'd0;
     localparam START_BIT = 3'd1;
     localparam DATA_BITS = 3'd2;
-    localparam STOP_BIT  = 3'd3;
+    localparam STOP_BIT = 3'd3;
 
     reg [2:0] state;
     reg [2:0] bit_index;
@@ -23,7 +23,7 @@ module uart_rx #
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            state     <= IDLE;
+            state <= IDLE;
             rx_valid  <= 0;
             clk_count <= 0;
             bit_index <= 0;
