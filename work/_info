@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jonny/Desktop/CourseWork/Scripting/demo_uart
+vtb_uart
+Z1 !s110 1772717778
+!i10b 1
+!s100 cL`;dA4@PMZ1?9LCEef072
+IaK7zW@JIUJEzN2ICO`;>H3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1772717776
+8./tb/tb_uart.v
+F./tb/tb_uart.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1772717778.000000
+!s107 ./tb/tb_uart.v|
+!s90 ./tb/tb_uart.v|
+!i113 1
+Z5 tCvgOpt 0
+vuart_rx
+R1
+!i10b 1
+!s100 @mS=SL8TUGiPlIMOE;:cW2
+I^C4JM=hzil>_:_YG]SoE12
+R2
+R0
+w1772715193
+8./rtl/uart_rx.v
+F./rtl/uart_rx.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./rtl/uart_rx.v|
+!s90 ./rtl/uart_rx.v|
+!i113 1
+R5
+vuart_top
+R1
+!i10b 1
+!s100 if]S2UC3K8hi0AYgn56<g1
+IF29bZn0ZLYmhaIhcUhbOA1
+R2
+R0
+w1772715212
+8./rtl/uart_top.v
+F./rtl/uart_top.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./rtl/uart_top.v|
+!s90 ./rtl/uart_top.v|
+!i113 1
+R5
+vuart_tx
+R1
+!i10b 1
+!s100 jVB<fYn<dW94>MXQ@No7B2
+I=@hSLgW5bf4l[h9XdX3_50
+R2
+R0
+w1772715176
+8./rtl/uart_tx.v
+F./rtl/uart_tx.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./rtl/uart_tx.v|
+!s90 ./rtl/uart_tx.v|
+!i113 1
+R5
